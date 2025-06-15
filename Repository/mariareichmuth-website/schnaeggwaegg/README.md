@@ -366,6 +366,11 @@ Stattdessen ist Zone 2 heute eine visuelle Abschreckzone mit symbolischer Dars
 Ein weiteres Learning betrifft den **PIR-Sensor in Zone 1**. Anfangs lieferte er unzuverlässige oder sogar falsche Signale. Nach längerer Fehlersuche stellte sich heraus, dass das Problem **am Anschluss-Pin D8 (GPIO 8)** des ESP32 lag – dieser ist intern speziell belegt und kann zu unerwartetem Verhalten führen.  
 Durch den Wechsel auf einen anderen GPIO-Pin konnte ich die **Zuverlässigkeit des Sensors deutlich verbessern**. Dieses Beispiel zeigt, wie wichtig es ist, sich mit den **internen Besonderheiten eines Mikrocontrollers** auseinanderzusetzen.
 
+
+### Hilfsmittel
+
+Für alle Codes habe ich ChatGPT4.0 verwendet. Die Steckpläne habe ich mit Fritzing erstellt und das Flussdiagramm/Screenflow mit Figma. Der Komponentenplan basiert auf Code.
+
 ### Fazit
 
 Das Projekt hat mir eindrücklich gezeigt, wie viele kleine Entscheidungen – von der Pinbelegung über ethische Überlegungen bis zur Sensorlogik – einen grossen Einfluss auf die Funktionalität und Aussagekraft eines interaktiven Systems haben. Ich konnte wertvolle Erfahrungen im Umgang mit Hardware, in der Fehleranalyse, im systemischen Denken und in der verantwortungsvollen Umsetzung technischer Lösungen sammeln.
