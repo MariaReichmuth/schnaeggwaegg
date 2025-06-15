@@ -352,13 +352,19 @@ Rückmeldungen und Erweiterungen sind herzlich willkommen!
 
 Falls du es nachmachen möchtest: Viel Erfolg mit deinem eigenen **SchnäggWägg** – und mögen keine Schnecken mehr dein Beet befallen!
 
-## Learnings & Reflexion
+## Learnings und Reflexion
 
 Im Verlauf des Projekts habe ich viele technische und konzeptionelle Erkenntnisse gewonnen – sowohl auf Hardware- als auch auf Software-Ebene. Einige Herausforderungen haben mich dazu gezwungen, ursprüngliche Ideen zu überdenken und bessere, sicherere Lösungen zu finden.
 
 ### Sicherheit und Verantwortung: Zone 2
 
-Ursprünglich war geplant, die Abschreckung in **Zone 2** mit einem echten Vieh-Elektrozaun-Modul umzusetzen, gesteuert über ein Relais. Erste Tests zeigten jedoch, dass die Spannung dabei potenziell zu hoch für Schnecken hätte sein können. Auch wenn ein kurzer Impuls genügt hätte, entschied ich mich bewusst gegen diese Lösung – aus **ethischen Gründen**, um die Schnecken **nicht zu verletzen**.  
+Ursprünglich war geplant, die Abschreckung in **Zone 2** mit einem echten Viehhüter-Elektrozaun umzusetzen, gesteuert über ein Relais-Modul. Recherche und Tests an mir selber ;) zeigten jedoch, dass die Spannung dabei potenziell zu hoch für Schnecken hätte sein können. Auch wenn ein kurzer Impuls genügt hätte, entschied ich mich bewusst gegen diese Lösung – aus **ethischen Gründen**, um die Schnecken **nicht zu verletzen**.
+
+[![Viehhüter](viehhüter.jpeg)](viehhüter.jpeg)
+
+[![Relais-Modul](relais.jpeg)](relais.jpeg)
+
+  
 Stattdessen ist Zone 2 heute eine visuelle Abschreckzone mit symbolischer Darstellung in der Weboberfläche – **ohne aktiven Stromimpuls**.
 
 ### Technisches Feintuning: PIR-Probleme in Zone 1
