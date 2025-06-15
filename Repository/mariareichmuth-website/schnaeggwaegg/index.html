@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Basis-Metadaten -->
+  <meta charset="UTF-8" />
+  <title>SchnäggWägg</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=10" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,700;0,900&display=swap" rel="stylesheet">
+
+  <!-- Favicon (SVG) -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Chart.js für Diagramme -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="lock-scroll"> <!-- Startseite zunächst gesperrt, bis Scroll-Intro abgeschlossen ist -->
+
+  <!-- Introbereich mit Hintergrundvideo -->
+  <section id="intro">
+    <div class="video-container">
+      <!-- Videohintergrund -->
+      <video id="bg-video" autoplay muted loop playsinline>
+        <source src="assets/zeitraffer_schnabelsberg.mp4" type="video/mp4">
+        Dein Browser unterstützt das Videoformat nicht.
+      </video>
+
+      <!-- Overlay über dem Video (z. B. dunkler Verlauf) -->
+      <div id="video-overlay"></div>
+
+      <!-- Logo im Intro -->
+      <img src="assets/logov4.svg" alt="Logo" id="logo" />
+
+      <!-- Navigation im Introbereich -->
+      <nav class="video-nav">
+        <ul>
+          <li><a href="#" onclick="ladeStatistik('alleZonen'); return false;">Statistik</a></li>
+          <a href="#" onclick="ladeStatistik('ueber')">Über</a>
+        </ul>
+      </nav>
+
+      <!-- Visueller Verlauf im unteren Bereich des Videos -->
+      <div class="video-gradient"></div>
+    </div>
+
+    <!-- Platzhalter, um korrektes Scrollverhalten nach Animation zu ermöglichen -->
+    <div class="intro-placeholder"></div>
+  </section>
+
+  <!-- Hauptinhalt -->
+  <main id="main-content" class="dark-section">
+    <div id="start-content">
+      <div class="container">
+        <div class="text-block">
+          <!-- Haupttitel -->
+          <h1>
+            Heute ist <span class="highlight">Technik</span>,<br>
+            <span class="highlight">Schnecke</span> war gestern
+          </h1>
+
+          <!-- Einführungstext -->
+          <p>
+            Eines der grössten Probleme aller leidenschaftlichen Gemüse-Eltern sind die unerwünschten, schleimigen Eindringlinge – Nacktschnecken. 
+            Sie kommen bei Nacht – völlig geräuschlos und schaffen es regelmässig, uns die unbeschwerte Gärtnerlaune zu verderben. 
+            Das Projekt SchnäggWägg soll dazu dienen, diese gewitzten Salatdiebe in den Griff zu bekommen. Das jedoch ohne Gift, ohne Chemie und ohne viel Aufwand.
+          </p>
+
+          <!-- Claim -->
+          <p class="claim">Kein Gift – keine Chemie – keine Probleme</p>
+        </div>
+
+        <!-- Live-Daten aus den Zonen -->
+        <section class="live-box" id="statistik">
+          <h2>Live vom Hochbeet</h2>
+          <div class="zones">
+
+            <!-- Zone 1 -->
+            <div class="zone-block">
+              <div class="zone zone-1">
+                <h3>ZONE 1</h3>
+                <p>letzte<br>Aktivität</p>
+                <div class="time" id="time-zone1">–</div> <!-- Wird dynamisch aktualisiert -->
+              </div>
+              <button class="btn zone-btn" onclick="ladeStatistik('zone1')">Statistik Zone 1</button>
+            </div>
+
+            <!-- Zone 2 -->
+            <div class="zone-block">
+              <div class="zone zone-2">
+                <h3>ZONE 2</h3>
+                <p>Elektroschock<br><br><br></p> <!-- Kein Zeitwert, da kein Sensor -->
+                <div class="time">
+                  <img src="assets/blitz.svg" alt="Blitzsymbol" class="blitz-icon" />
+                </div>
+              </div>
+              <button class="btn zone-btn" onclick="ladeStatistik('zone2')">Details Zone 2</button>
+            </div>
+
+            <!-- Zone 3 -->
+            <div class="zone-block">
+              <div class="zone zone-3">
+                <h3>ZONE 3</h3>
+                <p>letzte<br>Aktivität</p>
+                <div class="time" id="time-zone3">–</div> <!-- Wird dynamisch aktualisiert -->
+              </div>
+              <button class="btn zone-btn" onclick="ladeStatistik('zone3')">Statistik Zone 3</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Bereich für nachgeladene Statistikinhalte -->
+    <div id="statistik-wrapper" style="display: none;"></div>
+  </main>
+
+  <!-- Fussbereich -->
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <img src="assets/logov5.svg" alt="Logo" />
+        <p>Copyright Maria Reichmuth 2025.<br>All rights reserved</p>
+      </div>
+      <div class="footer-right" id="ueber">
+        <h4>Kontakt</h4>
+        <p>
+          Maria Reichmuth<br>
+          Ochsnerstrasse 5<br>
+          8840 Einsiedeln<br>
+          mariareichmuth00@gmail.com
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript-Logik -->
+  <script src="script.js"></script>
+</body>
+</html>

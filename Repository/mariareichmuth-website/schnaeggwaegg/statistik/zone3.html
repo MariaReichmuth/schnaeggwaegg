@@ -1,0 +1,39 @@
+<div class="container"> <!-- Layout-Container mit fixem Seitenabstand -->
+  <div class="zone-statistik"> <!-- Bereich für Statistiken der Zone 3 -->
+
+    <!-- Titel und Beschreibung -->
+    <h1>ZONE 3</h1>
+    <p>
+      Zone 3 befindet sich ganz oben im Hochbeet. Nur Schnecken, die es weit geschafft haben, gelangen bis hierher. 
+      Ein Berührungssensor erkennt Bewegungen dieser mutigen Eindringlinge.
+    </p>
+
+    <!-- Statistikbox mit Diagramm -->
+    <div class="chart-box">
+      
+      <!-- Umschalter für Zeitbereich: 7 oder 30 Tage -->
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" data-range="7">letzte 7 Tage</button>
+        <button class="toggle-btn" data-range="30">letzte 30 Tage</button>
+      </div>
+
+      <!-- Canvas für das Balkendiagramm -->
+      <canvas id="chartZone3" height="300"></canvas>
+
+      <!-- Legende für Balkenfarben -->
+      <p class="legend-label">
+        <span style="color: #4B4B4B;">■ Berührung</span>
+      </p>
+    </div>
+
+    <!-- Navigationsbereich für die Zonenauswahl -->
+    <div class="zone-nav">
+      <button class="zurueck-btn">zurück</button>
+      <button class="zone-nav-btn" data-zone="zone1">ZONE 1</button>
+      <button class="zone-nav-btn" data-zone="zone2">ZONE 2</button>
+      <button class="zone-nav-btn" data-zone="zone3">ZONE 3</button>
+      <button class="zone-nav-btn" data-zone="alleZonen">ALLE ZONEN</button>
+    </div>
+
+  </div>
+</div>

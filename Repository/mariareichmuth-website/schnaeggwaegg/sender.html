@@ -1,0 +1,69 @@
+<!-- 
+  sender.html
+  Dieses Formular sendet Benutzereingaben als JSON per HTTP POST an die PHP-Schnittstelle load.php.
+  Anwendung zur Simulation von Sensorwerten.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example Sender</title>
+  <script>
+    // Wird aufgerufen, wenn das Formular abgeschickt wird
+    async function submitForm(event) {
+      event.preventDefault(); // Verhindert das automatische Neuladen der Seite
+
+      // Formulardaten in ein Objekt umwandeln
+      const formData = new FormData(event.target);
+      const dataObject = {
+        wert: formData.get("wert") // Lese Eingabewert aus dem Feld mit name="wert"
+      };
+
+      // Objekt in JSON-String umwandeln
+      const jsonstring = JSON.stringify(dataObject);
+      console.log(jsonstring); // Zur Kontrolle in der Konsole ausgeben
+
+      const messageElement = document.querySelector("#message"); // Element für Rückmeldung an Nutzer
+
+      try {
+        // Sende JSON-Daten per POST an load.php
+        const response = await fetch("load.php", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json' // Wichtig: als JSON kennzeichnen
+          },
+          body: jsonstring
+        });
+
+        // Erfolg: Antwort ist OK (HTTP 200–299)
+        if (response.ok) {
+          messageElement.textContent = "Message successfully delivered!";
+          messageElement.style.color = "green";
+        } else {
+          // Fehlerfall: gib Statuscode + Antworttext aus
+          const errorMessage = await response.text();
+          messageElement.textContent = `Error: ${response.statusText} – ${errorMessage}`;
+          messageElement.style.color = "red";
+        }
+      } catch (error) {
+        // Bei Verbindungsfehlern oder anderen Ausnahmen
+        messageElement.textContent = "An error occurred: " + error.message;
+        messageElement.style.color = "red";
+        console.error("Fetch error:", error); // In Konsole für Entwickler
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Formular mit einem einzigen Eingabefeld -->
+  <form method="POST" onsubmit="submitForm(event)">  
+    <label for="wert">Wert:</label>
+    <input type="text" id="wert" name="wert" required><br><br>    
+    <input type="submit" name="submit" value="Submit">
+  </form>
+
+  <!-- Hier wird Erfolgs- oder Fehlermeldung angezeigt -->
+  <p id="message"></p>
+</body>
+</html>

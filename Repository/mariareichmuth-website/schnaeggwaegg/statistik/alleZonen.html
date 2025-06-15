@@ -1,0 +1,40 @@
+<div class="container">
+  <!-- Statistikbereich für den Zonenvergleich -->
+  <div class="zone-statistik">
+
+    <!-- Titel und Beschreibung -->
+    <h1>Wochenvergleich aller Zonen</h1>
+    <p>
+      Wie viele Schnecken durchdringen alle Zonen? Wie viele von ihnen wurden in Zone 2
+      vom Elektrozaun erschreckt und so aufgehalten?
+    </p>
+
+    <!-- Diagramm und Erfolgsquote -->
+    <div class="chart-box">
+      
+      <!-- Erfolgsquote-Box für Zone 2 -->
+      <div class="erfolgs-box" id="erfolgs-box">
+        Erfolgsquote<br><strong>Elektrozaun (Zone 2)</strong><br>
+        <span class="erfolgs-wert" id="erfolgs-wert">--%</span>
+      </div>
+
+      <!-- Canvas für das Balkendiagramm -->
+      <canvas id="chartAlleZonen" height="300"></canvas>
+
+      <!-- Erklärung zur Darstellung -->
+      <p class="legend-label">
+        Anzahl Schnecken, die die jeweilige Zone durchquert haben
+      </p>
+    </div>
+
+    <!-- Navigation zwischen den Zonen -->
+    <div class="zone-nav">
+      <button class="zurueck-btn">zurück</button>
+      <button class="zone-nav-btn" data-zone="zone1">ZONE 1</button>
+      <button class="zone-nav-btn" data-zone="zone2">ZONE 2</button>
+      <button class="zone-nav-btn" data-zone="zone3">ZONE 3</button>
+      <button class="zone-nav-btn" data-zone="alleZonen">ALLE ZONEN</button>
+    </div>
+
+  </div>
+</div>

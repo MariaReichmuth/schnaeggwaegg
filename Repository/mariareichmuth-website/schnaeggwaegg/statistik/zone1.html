@@ -1,0 +1,45 @@
+<!-- Container für den gesamten Inhaltsbereich -->
+<div class="container">
+
+  <!-- Bereich für die Statistikanzeige der Zone 1 -->
+  <div class="zone-statistik">
+
+    <!-- Überschrift und Beschreibung der Zone 1 -->
+    <h1>ZONE 1</h1>
+    <p>
+      Die Zone 1 ist die unterste des Hochbeets. Wenn eine Schnecke ins Beet eindringen will, 
+      erreicht sie diese Zone als erstes. Ein Touch- und Infrarotsensor erkennt hier, 
+      wenn eine Schnecke darüber kriecht. Hier befinden sich durchschnittlich 
+      die häufigsten Schnecken von den drei Zonen.
+    </p>
+
+    <!-- Box für das Diagramm und die Steuerelemente -->
+    <div class="chart-box">
+
+      <!-- Buttons zur Auswahl des Zeitraums (Standard: 7 Tage) -->
+      <div class="toggle-buttons">
+        <button class="toggle-btn active" data-range="7">letzte 7 Tage</button>
+        <button class="toggle-btn" data-range="30">letzte 30 Tage</button>
+      </div>
+
+      <!-- Diagramm-Canvas (wird per JavaScript mit Daten gefüllt) -->
+      <canvas id="chartZone1" height="300"></canvas>
+
+      <!-- Legende zur Farberklärung: Touch vs. PIR -->
+      <p class="legend-label">
+        <span style="color: #4B4B4B;">■ Berührung</span> &nbsp;
+        <span style="color: #9F2395;">■ Bewegung</span>
+      </p>
+    </div>
+
+    <!-- Navigation zwischen den Zonen und zur Gesamtansicht -->
+    <div class="zone-nav">
+      <button class="zurueck-btn">zurück</button>
+      <button class="zone-nav-btn" data-zone="zone1">ZONE 1</button>
+      <button class="zone-nav-btn" data-zone="zone2">ZONE 2</button>
+      <button class="zone-nav-btn" data-zone="zone3">ZONE 3</button>
+      <button class="zone-nav-btn" data-zone="alleZonen">ALLE ZONEN</button>
+    </div>
+
+  </div>
+</div>
