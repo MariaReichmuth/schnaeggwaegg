@@ -1,4 +1,4 @@
-[![Titelbild](assets/titelfoto.png)](assets/titelfoto.png)
+[![Titelbild](titelfoto.png)](titelfoto.png)
 
 
 # 🐌 SchnäggWägg – Ein smarter Schneckenzaun mit Sensorik und Datenvisualisierung
@@ -7,7 +7,7 @@
 
 Der Zaun besteht aus drei Zonen, die jeweils mit unterschiedlichen Sensoren ausgestattet sind. 
 
-[![Zonen](assets/zonen.png)](assets/zonen.png)
+[![Zonen](zonen.png)](zonen.png)
 
 
 Zone 1:  Touch- und PIR-Sensor
@@ -42,13 +42,13 @@ Das Projekt kombiniert **physische Sensorik (Touch, PIR, Stromimpuls)** mit **Da
 - **WLAN-Verbindung** – Mittels mobilem WLAN-Router mit Datenabo, damit die Microcontroller auch direkt auf dem Acker zuverlässig funken können
 - **Verpackung** – wasserdichte Gartenbox
 
-[![Microcontroller](assets/microcontroller.jpeg)](assets/microcontroller.jpeg)
+[![Microcontroller](microcontroller.jpeg)](microcontroller.jpeg)
 
-[![Steckplan 1](assets/steckplan_1.png)](assets/steckplan_1.png)
+[![Steckplan 1](steckplan_1.png)](steckplan_1.png)
 
-[![Steckplan 2](assets/steckplan_2.png)](assets/steckplan_2.png)
+[![Steckplan 2](steckplan_2.png)](steckplan_2.png)
 
-[![Verpackung](assets/verpackung.png)](assets/verpackung.png)
+[![Verpackung](verpackung.png)](verpackung.png)
 ### Software-Komponenten
 
 - **Arduino IDE** – Die ESP32-Mikrocontroller wurden mit der Arduino-Entwicklungsumgebung programmiert. Die Firmware erkennt Sensordaten, prüft Änderungen, synchronisiert die Uhrzeit über NTP und sendet JSON-Daten an den Server.
@@ -74,7 +74,7 @@ Das Projekt kombiniert **physische Sensorik (Touch, PIR, Stromimpuls)** mit **Da
 - **Frontend (HTML, CSS, JavaScript)** – Die Website visualisiert alle Daten in Form von Diagrammen (Chart.js), berechnet Erfolgsquoten und erlaubt den Wechsel zwischen Tages- und Wochenansicht
 
 ---
-[![Komponentenplan](assets/komponentenplan.png)](assets/komponentenplan.png)
+[![Komponentenplan](komponentenplan.png)](komponentenplan.png)
 
 
 ## Aufbau der Website
