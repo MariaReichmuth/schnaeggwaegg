@@ -42,7 +42,7 @@ Das Projekt kombiniert **physische Sensorik (Touch, PIR, Stromimpuls)** mit **Da
 - **WLAN-Verbindung** – Mittels mobilem WLAN-Router mit Datenabo, damit die Microcontroller auch direkt auf dem Acker zuverlässig funken können
 - **Verpackung** – wasserdichte Gartenbox
 
-[![Microcontroller](microcontroller.jpeg)](microcontroller.jpeg)
+[![Microcontroller](Microcontroller.jpeg)](Microcontroller.jpeg)
 
 [![Steckplan 1](steckplan_1.png)](steckplan_1.png)
 
