@@ -14,8 +14,8 @@ unsigned long lastRestart = 0;
 const unsigned long restartInterval = 5 * 60 * 1000; // 5 Minuten
 
 // WLAN-Zugangsdaten
-const char* ssid = "TP-Link_F6F3";
-const char* pass = "63845625";
+const char* ssid = "T-";
+const char* pass = "-";
 
 // URL der Datenbank-Schnittstelle
 const char* serverURL = "https://mariareichmuth.ch/schnaeggwaegg/load.php";
