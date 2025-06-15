@@ -360,7 +360,7 @@ Im Verlauf des Projekts habe ich viele technische und konzeptionelle Erkenntniss
 
 Ursprünglich war geplant, die Abschreckung in **Zone 2** mit einem echten Viehhüter-Elektrozaun umzusetzen, gesteuert über ein Relais-Modul. Recherche und Tests an mir selber ;) zeigten jedoch, dass die Spannung dabei potenziell zu hoch für Schnecken hätte sein können. Auch wenn ein kurzer Impuls genügt hätte, entschied ich mich bewusst gegen diese Lösung – aus **ethischen Gründen**, um die Schnecken **nicht zu verletzen**.
 
-[![Viehhüter](viehhüter.jpeg)](viehhüter.jpeg)
+[![Viehhüter](viehhüter.jpeg)](viehhüter.jpeg)
 
 [![Relais-Modul](relais.jpeg)](relais.jpeg)
 
